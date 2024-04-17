@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_project/widgets/button.dart';
-import 'package:flutter_project/screens/login.dart';
+import 'package:flutter_project/screens/loginscreens/login.dart';
 import 'package:flutter_project/widgets/text_field.dart';
 
 class HomePage extends StatelessWidget {
