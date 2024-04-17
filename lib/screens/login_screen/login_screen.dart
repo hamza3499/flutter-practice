@@ -4,8 +4,9 @@ import 'package:flutter/widgets.dart';
 
 import 'package:flutter_project/Widgets/button.dart';
 
-import 'package:flutter_project/Widgets/text_field.dart';
-import 'package:flutter_project/screens/landingpages/landingpage.dart';
+
+import 'package:flutter_project/screens/landing_page/landing_page.dart';
+import 'package:flutter_project/widgets/text_field.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -50,7 +51,9 @@ class Login extends StatelessWidget {
                 ),
                 const CircleAvatar(
                   radius: 20,
-                  child: Image(image: AssetImage('assets/11.png')),
+                  child: Image(
+                    image: AssetImage('assets/11.png'),
+                  ),
                 ),
               ],
             ),
@@ -59,13 +62,15 @@ class Login extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  UserName(
-                      icon: Icons.email, obscureText: false, hintText: 'Email'),
+                  TeeextField(
+                      icon: Icons.supervised_user_circle,
+                      obscureText: false,
+                      hintText: 'User Name'),
                   SizedBox(
                     height: 30,
                   ),
-                  UserName(
-                      icon: Icons.lock,
+                  TeeextField(
+                      icon: Icons.lock_sharp,
                       obscureText: true,
                       hintText: 'Password'),
                 ],
@@ -106,7 +111,9 @@ class Login extends StatelessWidget {
                 const Text(
                   'Dont Have An Account',
                   style: TextStyle(
-                      fontSize: 20, color: Color.fromARGB(130, 255, 255, 255)),
+                    fontSize: 20,
+                    color: Color.fromARGB(130, 255, 255, 255),
+                  ),
                 ),
                 const SizedBox(
                   width: 10,
@@ -114,25 +121,28 @@ class Login extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LandingPage(),
+                      ),
+                    );
                   },
                   child: const SizedBox(
-                      height: 40,
-                      width: 80,
-                      child: Center(
-                        child: Text(
-                          'SIGN UP',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900),
-                        ),
-                      )),
-                )
+                    height: 40,
+                    width: 80,
+                    child: Center(
+                      child: Text(
+                        'SIGN UP',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900),
+                      ),
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

@@ -21,9 +21,13 @@ class Buttons extends StatelessWidget {
                 BoxShadow(
                     color: Colors.transparent,
                     spreadRadius: 4,
-                    offset: Offset(0, 3)),
-              ]),
-              child: Center(child: Text(text,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),)),
+                    offset: Offset(0, 3),
+                    ),
+              ],
+              ),
+              child: Center(child: Text(text,style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),
+              ),
+              ),
               ),
     );
   }

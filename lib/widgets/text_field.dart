@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class UserName extends StatelessWidget {
+class TeeextField extends StatelessWidget {
   final IconData icon;
   final String hintText;
   final bool obscureText;
-  const UserName({
+  const TeeextField({
     super.key,
     required this.icon,
     required this.obscureText,
@@ -24,15 +24,19 @@ class UserName extends StatelessWidget {
               BoxShadow(
                   color: Colors.transparent,
                   spreadRadius: 4,
-                  offset: Offset(0, 3)),
-            ]),
+                  offset: Offset(0, 3),
+                  ),
+            ],
+            ),
         child: TextField(
           obscureText: obscureText,
           decoration: InputDecoration(
               focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(11),
                   borderSide: const BorderSide(
-                      color: Color.fromARGB(255, 250, 246, 10), width: 2)),
+                      color: Color.fromARGB(255, 250, 246, 10),
+                       width: 2),
+                      ),
               hintText: hintText,
               hintStyle: const TextStyle(
                   color: Colors.white,
@@ -48,7 +52,8 @@ class UserName extends StatelessWidget {
                   color: Colors.white,
                   size: 30,
                 ),
-              )),
+              ),
+              ),
         ),
       ),
     );

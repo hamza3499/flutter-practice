@@ -1,12 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_project/screens/login_screen/login_screen.dart';
 import 'package:flutter_project/widgets/button.dart';
-import 'package:flutter_project/screens/loginscreens/login.dart';
+
 import 'package:flutter_project/widgets/text_field.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class LandingPage extends StatelessWidget {
+  const LandingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
             end: Alignment.bottomCenter,
             colors: [
               Color.fromARGB(255, 50, 1, 49),
-              Color.fromARGB(255, 144, 5, 72)
+              Color.fromARGB(255, 144, 5, 72),
             ], // Specify your gradient colors
           ),
         ),
@@ -52,39 +53,41 @@ class HomePage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Hello',
-                      style: TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.w800,
-                          color: Colors.white)),
+                  Text(
+                    'Hello',
+                    style: TextStyle(
+                        fontSize: 40,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white),
+                  ),
                   Text(
                     'Sign In!!!!!',
                     style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.w800,
                         color: Colors.white),
-                  )
+                  ),
                 ],
               ),
             ),
-            const UserName(
+            const TeeextField(
                 icon: Icons.supervised_user_circle,
                 obscureText: false,
                 hintText: 'User Name'),
             const SizedBox(
               height: 30,
             ),
-            const UserName(
+            const TeeextField(
                 icon: Icons.email, obscureText: false, hintText: 'Email'),
             const SizedBox(
               height: 30,
             ),
-            const UserName(
+            const TeeextField(
                 icon: Icons.lock, obscureText: true, hintText: 'Password'),
             const SizedBox(
               height: 30,
             ),
-            const UserName(
+            const TeeextField(
                 icon: Icons.lock_clock_rounded,
                 obscureText: true,
                 hintText: 'Confirm Password'),
@@ -100,28 +103,35 @@ class HomePage extends StatelessWidget {
               children: [
                 const Text(
                   'I Have an Account Already',
-                  style: TextStyle(fontSize: 20, color: Color.fromARGB(121, 255, 255, 255)),
+                  style: TextStyle(
+                      fontSize: 20, color: Color.fromARGB(121, 255, 255, 255)),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 GestureDetector(
-                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));},
-                  child: const SizedBox(
-                      height: 40,
-                      width: 60,
-                      child: Center(
-                        child: Text(
-                          'LOGIN',
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w900),
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Login(),
                         ),
-                      )),
-                )
+                        );
+                  },
+                  child: const SizedBox(
+                    height: 40,
+                    width: 60,
+                    child: Center(
+                      child: Text(
+                        'LOGIN',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 255, 255, 255),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w900),
+                      ),
+                    ),
+                  ),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
