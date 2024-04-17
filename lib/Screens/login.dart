@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_project/Screens/landingpage.dart';
+import 'package:flutter_project/screens/landingpage.dart';
 import 'package:flutter_project/Widgets/button.dart';
 import 'package:flutter_project/landingpage.dart';
 import 'package:flutter_project/Widgets/text_field.dart';
