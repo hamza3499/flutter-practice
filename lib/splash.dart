@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_project/Screens/landingpage.dart';
 import 'package:flutter_project/landingpage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,7 +15,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(const Duration(seconds: 4), () {
       // Navigate to the next screen after the timer expires
@@ -34,7 +34,10 @@ class _SplashScreenState extends State<SplashScreen> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color.fromARGB(255, 50, 1, 49), Color.fromARGB(255, 144, 5, 72)], // Specify your gradient colors
+            colors: [
+              Color.fromARGB(255, 50, 1, 49),
+              Color.fromARGB(255, 5, 24, 144)
+            ], // Specify your gradient colors
           ),
         ),
 

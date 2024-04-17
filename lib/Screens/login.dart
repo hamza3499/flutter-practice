@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_project/button.dart';
+import 'package:flutter_project/Screens/landingpage.dart';
+import 'package:flutter_project/Widgets/button.dart';
 import 'package:flutter_project/landingpage.dart';
-import 'package:flutter_project/textfield.dart';
+import 'package:flutter_project/Widgets/text_field.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -29,7 +30,7 @@ class Login extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+          children: <Widget>[
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -53,11 +54,10 @@ class Login extends StatelessWidget {
               ],
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 30,right: 30,top: 100),
+              padding: EdgeInsets.only(left: 30, right: 30, top: 100),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  
                   UserName(
                       icon: Icons.email, obscureText: false, hintText: 'Email'),
                   SizedBox(
@@ -73,15 +73,12 @@ class Login extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-             Padding(
-               padding: const EdgeInsets.only(right: 40),
-               child: Row(
+            const Padding(
+              padding: EdgeInsets.only(right: 40),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                 children: [
-                   Container(
-                   
-                    
-                    
+                children: [
+                  SizedBox(
                     height: 40,
                     width: 130,
                     child: Text(
@@ -91,14 +88,14 @@ class Login extends StatelessWidget {
                           fontSize: 15,
                           fontWeight: FontWeight.w900),
                     ),
-                               ),
-                 ],
-               ),
-             ),
+                  ),
+                ],
+              ),
+            ),
             const SizedBox(
               width: 10,
             ),
-           Buttons(text: 'Login'),
+            const Buttons(text: 'Login'),
             const SizedBox(
               height: 10,
             ),
@@ -107,13 +104,19 @@ class Login extends StatelessWidget {
               children: [
                 const Text(
                   'Dont Have An Account',
-                  style: TextStyle(fontSize: 20, color: Color.fromARGB(130, 255, 255, 255)),
+                  style: TextStyle(
+                      fontSize: 20, color: Color.fromARGB(130, 255, 255, 255)),
                 ),
                 const SizedBox(
                   width: 10,
                 ),
                 GestureDetector(
-                  onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
+                  },
                   child: const SizedBox(
                       height: 40,
                       width: 80,
